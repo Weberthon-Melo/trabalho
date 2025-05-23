@@ -1,0 +1,272 @@
+<!-- Declaração do tipo de documento HTML -->
+<!DOCTYPE html>
+
+<!-- Início do documento HTML -->
+<html lang="pt-br">
+
+  <!-- Cabeçalho da página, onde ficam informações sobre o site -->
+  <head>
+    <!-- Define o conjunto de caracteres usado (acentuação e símbolos) -->
+    <meta charset="UTF-8">
+
+    <!-- Define a visualização em dispositivos móveis (responsividade) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título que aparece na aba do navegador -->
+    <title>2°Informatica</title>
+
+    <!-- Aqui você pode colocar links para arquivos CSS externos -->
+    <!-- <link rel="stylesheet" href="estilos.css"> -->
+  </head>
+
+  <!-- Corpo da página, onde o conteúdo visível é colocado -->
+  <body>
+
+    <!-- Cabeçalho visível da página -->
+    <header>
+      <!-- Título principal do site -->
+      <h1 style="color: orange;">OS DEZ ELEMENTOS</h1>
+      <!-- Subtítulo ou descrição -->
+<style>
+  .galeria {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar linha se faltar espaço */
+    gap: 10px; /* Espaço entre as imagens */
+    padding: 10px;
+  }
+
+  .galeria li {
+    list-style: none;
+  }
+
+  .galeria img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s;
+  }
+
+  .galeria img:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+  }
+</style>
+
+<style>
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+  }
+
+  .galeria li {
+    list-style: none;
+    perspective: 1000px; /* Necessário para efeito 3D */
+  }
+
+  .card {
+    width: 160px;
+    height: 160px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+  }
+
+  .galeria li:hover .card {
+    transform: rotateY(180deg);
+  }
+
+  .card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .card-back {
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    transform: rotateY(180deg);
+  }
+</style>
+
+<ul class="galeria">
+  <li>
+    <a href="file:///D:/Trabalho%20do%20yuri/ferreira.html">
+      <div class="card">
+        <div class="card-face card-front">
+          <img src="fereru.jpg" alt="Ana Julia Ferreira">
+        </div>
+        <div class="card-face card-back">
+          Ana Julia Ferreira
+        </div>
+      </div>
+    </a>
+  </li>
+
+  <li>
+    <a href="file:///D:/Trabalho%20do%20yuri/camila.html">
+      <div class="card">
+        <div class="card-face card-front">
+          <img src="camilexx.jpg" alt="Camila Natal">
+        </div>
+        <div class="card-face card-back">
+          Camila Natal
+        </div>
+      </div>
+    </a>
+  </li>
+
+  <li>
+    <a href="file:///D:/Trabalho%20do%20yuri/elojah.html">
+      <div class="card">
+        <div class="card-face card-front">
+          <img src="elojah.jpg" alt="Eloah Luiza">
+        </div>
+        <div class="card-face card-back">
+          Eloah Luiza
+        </div>
+      </div>
+    </a>
+  </li>
+
+  <li>
+    <a href="file:///D:/Trabalho%20do%20yuri/helen.html">
+      <div class="card">
+        <div class="card-face card-front">
+          <img src="helena.jpg" alt="Helen Caroline">
+        </div>
+        <div class="card-face card-back">
+          Helen Caroline
+        </div>
+      </div>
+    </a>
+  </li>
+
+  <li>
+    <a href="file:///D:/Trabalho%20do%20yuri/isac.html">
+      <div class="card">
+        <div class="card-face card-front">
+          <img src="bixa.jpg" alt="Isac Gabriel">
+        </div>
+        <div class="card-face card-back">
+          Isac Gabriel
+        </div>
+      </div>
+    </a>
+  </li>
+
+  <li>
+    <a href="file:///D:/Trabalho%20do%20yuri/jubisus.html">
+      <div class="card">
+        <div class="card-face card-front">
+          <img src="jubisus.jpg" alt="Julia Vitoria">
+        </div>
+        <div class="card-face card-back">
+          Julia Vitoria
+        </div>
+      </div>
+    </a>
+  </li>
+
+  <li>
+    <a href="file:///D:/Trabalho%20do%20yuri/laura.html">
+      <div class="card">
+        <div class="card-face card-front">
+          <img src="laura.jpg" alt="Laura Manoela">
+        </div>
+        <div class="card-face card-back">
+          Laura Manoela
+        </div>
+      </div>
+    </a>
+  </li>
+
+  <li>
+    <a href="file:///D:/Trabalho%20do%20yuri/livia.html">
+      <div class="card">
+        <div class="card-face card-front">
+          <img src="liviuu.jpg" alt="Livia Silva">
+        </div>
+        <div class="card-face card-back">
+          Livia Silva
+        </div>
+      </div>
+    </a>
+  </li>
+
+  <li>
+    <a href="file:///D:/Trabalho%20do%20yuri/toru.html">
+      <div class="card">
+        <div class="card-face card-front">
+          <img src="tiru.jpg" alt="Victor Hugo">
+        </div>
+        <div class="card-face card-back">
+          Victor Hugo
+        </div>
+      </div>
+    </a>
+  </li>
+
+  <li>
+    <a href="file:///D:/Trabalho%20do%20yuri/weltu.html">
+      <div class="card">
+        <div class="card-face card-front">
+          <img src="webs.jpg" alt="Weberthon">
+        </div>
+        <div class="card-face card-back">
+          Weberthon
+        </div>
+      </div>
+    </a>
+  </li>
+</ul>
+
+
+
+
+    <!-- Área principal do conteúdo -->
+    <main>
+      <!-- Seção com texto -->
+      <section>
+        <!-- Título da seção -->
+        <h1 style="color: blue;font-size: 57px;">Sobre Nossa Sala</h1>
+        <!-- Parágrafo de texto -->
+<p style="font-size: 30px;">
+  Nossa sala é bem legal, até que não tem muitas brigas nem nada do tipo. A única dificuldade que os professores têm é em relação à conversa, porque o pessoal conversa muito alto. Atualmente, bastante gente de lá joga vôlei graças a mim, Weberthon, e ao Victor Hugo. A gente que basicamente influenciou a sala inteira — agora a maioria joga e se esforça para melhorar. Eu fico muito contente com isso. <br><br>
+  Este ano sou vice-líder. Com certeza não vou agradar a todos, mas estou dando meu melhor.
+</p>
+
+
+
+
+        
+      <!-- Outra seção com uma lista -->
+   
+
+
+    </main>
+    <!-- Rodapé do site -->
+    <footer>
+      <h1><a href="file:///D:/Trabalho%20do%20yuri/index.html">voltar para a pagina anterior</a></h1>
+      <!-- Informações finais -->
+      <p>&copy; 2025. Weberthon Davi. Todos os direitos reservados.</p>
+    </footer>
+
+  </body>
+</html>

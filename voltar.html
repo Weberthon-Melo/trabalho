@@ -1,0 +1,190 @@
+<!-- Declaração do tipo de documento HTML -->
+<!DOCTYPE html>
+
+<!-- Início do documento HTML -->
+<html lang="pt-br">
+
+  <!-- Cabeçalho da página, onde ficam informações sobre o site -->
+  <head>
+    <!-- Define o conjunto de caracteres usado (acentuação e símbolos) -->
+    <meta charset="UTF-8">
+
+    <!-- Define a visualização em dispositivos móveis (responsividade) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título que aparece na aba do navegador -->
+    <title>2°info trabalho</title>
+
+    <style>
+      /* Estilo principal */
+      body {
+        background-image: url("escola.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: black;
+      }
+
+      header {
+        text-align: center;
+        padding: 20px;
+      }
+
+      .logo {
+        display: block;
+        margin: 0 auto;
+        width: 150px;
+      }
+
+      .cabecalho-destaque {
+        background: linear-gradient(90deg, #2d67d3, #2d67d3);
+        color: white;
+        padding: 10px 2px;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        border-bottom: 5px solid #ffffff44;
+      }
+
+      .cabecalho-destaque h1 {
+        font-size: 28px;
+        margin: 0 0 10px 0;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .cabecalho-destaque p {
+        font-size: 10px;
+        margin: 0;
+        text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+      }
+
+      .titulo-azul {
+        color: orange;
+        font-weight: bold;
+      }
+
+      .titulo-laranja {
+        color: orange;
+      }
+
+      .titulo-branco {
+        color: orange;
+      }
+
+      .link-azul {
+        color: blue;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .link-azul:hover {
+        text-decoration: underline;
+      }
+
+      /* Botão de modo noturno */
+      #btn-modo {
+        margin-top: 10px;
+        padding: 5px 10px;
+        cursor: pointer;
+        background-color: white;
+        border: none;
+        border-radius: 5px;
+      }
+
+      /* Estilo do modo escuro */
+      body.modo-escuro {
+  background-color: rgba(0, 0, 0, 0.6); /* escurece a tela mantendo a imagem */
+  background-blend-mode: darken;
+  color: #f0f0f0;
+}
+
+
+      body.modo-escuro .cabecalho-destaque {
+        background: #1e1e1e;
+        color: white;
+      }
+
+      body.modo-escuro .titulo-azul,
+      body.modo-escuro .titulo-laranja,
+      body.modo-escuro .titulo-branco {
+        color: #f0f0f0;
+      }
+
+      body.modo-escuro a {
+        color: #66aaff;
+      }
+
+      body.modo-escuro #btn-modo {
+        background-color: #333;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <!-- Corpo da página, onde o conteúdo visível é colocado -->
+  <body>
+
+    <!-- Cabeçalho visível da página -->
+    <header class="cabecalho-destaque">
+      <h1>Bem-vindo ao nosso site!</h1>
+      <p>2°info</p>
+      <button onclick="toggleModoNoturno()" id="btn-modo">Modo Noturno</button>
+    </header>
+
+    <!-- Área principal do conteúdo -->
+    <main>
+      <!-- Seção com texto -->
+      <section>
+        <h2 class="titulo-azul">Sobre a escola</h2>
+        <ul>
+          <li>
+            <a href="file:///D:/Trabalho%20do%20yuri/2%C2%B0info.html" target="_blank" class="link-azul">
+              Escola Estadual São josé
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Outra seção com uma lista -->
+      <section>
+        <h2 class="titulo-laranja">Alunos 2°info</h2>
+        <ul>
+          <li>
+            <a href="file:///D:/Trabalho%20do%20yuri/Alunos.html" target="_blank" class="link-azul">
+              OS DEZ ELEMENTOS
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="foto-section">
+        <h2 class="titulo-branco">Uma foto nossa</h2>
+        <img src="2°infogeral.png" alt="Minha foto" width="340">
+      </section>
+    </main>
+
+    <!-- Rodapé do site -->
+    <footer>
+      <p>&copy; 2025. Weberthon Davi. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script para alternar o modo escuro -->
+    <script>
+      function toggleModoNoturno() {
+        const body = document.body;
+        const botao = document.getElementById('btn-modo');
+        body.classList.toggle('modo-escuro');
+
+        if (body.classList.contains('modo-escuro')) {
+          botao.textContent = 'Modo Claro';
+        } else {
+          botao.textContent = 'Modo Noturno';
+        }
+      }
+    </script>
+    
+  </body>
+</html>

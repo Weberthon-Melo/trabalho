@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meu Site Completo</title>
+
+  <style>
+    :root {
+      --bg-color: white;
+      --text-color: black;
+      --accent: #6200ea;
+    }
+
+    body {
+      font-family: sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .dark-mode {
+      --bg-color: #121212;
+      --text-color: white;
+    }
+
+    header {
+      background: var(--accent);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      background: #eee;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-color);
+    }
+
+    main {
+      padding: 1rem;
+    }
+
+    .grid {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .grid img {
+      width: 150px;
+      border-radius: 8px;
+    }
+
+    .skill {
+      margin: 10px 0;
+    }
+
+    .bar {
+      height: 20px;
+      background: var(--accent);
+      border-radius: 10px;
+    }
+
+    .html { width: 90%; }
+    .css { width: 80%; }
+    .js { width: 70%; }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 400px;
+    }
+
+    form input, form textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: var(--accent);
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #eee;
+    }
+
+    #clock {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    blockquote {
+      background: #f3f3f3;
+      padding: 10px;
+      border-left: 4px solid var(--accent);
+      margin: 10px 0;
+    }
+
+    .socials {
+      margin-top: 10px;
+    }
+
+    .socials a {
+      margin: 0 5px;
+      text-decoration: none;
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bem-vindo ao Meu Site!</h1>
+    <button id="toggle-theme">🌙 Alternar Tema</button>
+    <div id="clock"></div>
+  </header>
+
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#skills">Habilidades</a>
+    <a href="#blog">Blog</a>
+    <a href="#depoimentos">Depoimentos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <main>
+    <section id="sobre">
+      <h2>Sobre mim</h2>
+      <p>Sou desenvolvedor web apaixonado por criar experiências incríveis com HTML, CSS e JavaScript.</p>
+    </section>
+
+    <section id="galeria">
+      <h2>Galeria</h2>
+      <div class="grid">
+        <img src="https://via.placeholder.com/150" alt="Imagem 1">
+        <img src="https://via.placeholder.com/150" alt="Imagem 2">
+        <img src="https://via.placeholder.com/150" alt="Imagem 3">
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Habilidades</h2>
+      <div class="skill"><span>HTML</span><div class="bar html"></div></div>
+      <div class="skill"><span>CSS</span><div class="bar css"></div></div>
+      <div class="skill"><span>JavaScript</span><div class="bar js"></div></div>
+    </section>
+
+    <section id="blog">
+      <h2>Últimos Posts</h2>
+      <article>
+        <h3>Como aprendi HTML</h3>
+        <p>Minha jornada no desenvolvimento web começou em...</p>
+      </article>
+      <article>
+        <h3>Por que usar CSS moderno?</h3>
+        <p>Flexbox, Grid e Variáveis são ferramentas essenciais...</p>
+      </article>
+    </section>
+
+    <section id="depoimentos">
+      <h2>Depoimentos</h2>
+      <blockquote>“Excelente profissional, recomendo muito!” - Cliente A</blockquote>
+      <blockquote>“Criativo e dedicado!” - Cliente B</blockquote>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <form>
+        <input type="text" placeholder="Seu nome" required />
+        <input type="email" placeholder="Seu email" required />
+        <textarea placeholder="Sua mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 - Meu Site</p>
+    <div class="socials">
+      <a href="#" target="_blank">🐦 Twitter</a>
+      <a href="#" target="_blank">💼 LinkedIn</a>
+      <a href="#" target="_blank">📷 Instagram</a>
+    </div>
+  </footer>
+
+  <script>
+    // Alternar tema claro/escuro
+    const toggleBtn = document.getElementById("toggle-theme");
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+
+    // Relógio em tempo real
+    const clock = document.getElementById("clock");
+    function updateClock() {
+      const now = new Date();
+      clock.textContent = now.toLocaleTimeString("pt-BR");
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Escola Estadual São José</title>
+
+  <style>
+    /* Texto maior para melhor leitura */
+    .texto-maior {
+      font-size: 23px;
+      line-height: 1.6;
+    }
+
+    /* Título sobre a escola */
+    .pj {
+      font-size: 35px;
+      line-height: 3;
+      color: blue;
+      text-align: center;
+    }
+
+    /* Texto grande */
+    .texto-big {
+      font-size: 23px;
+      line-height: 1.6;
+    }
+
+    /* Galeria de fotos */
+    .galeria {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .destaques {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .destaques img {
+      max-width: 100%;
+      height: auto;
+      width: 600px;
+      border-radius: 8px;
+    }
+
+    .galeria-baixo {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .galeria-baixo img {
+      max-width: 100%;
+      height: auto;
+      width: 300px;
+      border-radius: 6px;
+    }
+
+    /* Estilo do título da galeria */
+    .galeria h2 {
+      color: orange;
+      text-align: center;
+    }
+
+    /* Mapa responsivo */
+    iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 450px;
+      border: 0;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    /* Cabeçalho principal */
+    header h1 {
+      text-align: center;
+      color: orange;
+    }
+
+    /* Rodapé centralizado */
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px 0;
+      background-color: #f5f5f5;
+      font-size: 14px;
+      color: #333;
+    }
+
+    footer a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Navegação simples */
+    nav {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>HISTÓRIA</h1>
+    <p class="texto-maior">
+      A história da Escola Estadual São José em Passos, MG, remonta a 1964 e celebra seus 60 anos de ensino
+      público. A instituição é uma das maiores da região, oferecendo educação básica desde o 6º ano do ensino fundamental
+      ao 3º ano do ensino médio. A escola está localizada na Rua Leopoldina, 45, Jd California, 37904-070, Passos, MG.
+      Detalhes da história e da escola:
+    </p>
+  </header>
+
+  <!-- Menu de navegação -->
+  <nav>
+    <a href="#historia">História</a>
+    <a href="#sobre">Sobre a Escola</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#localizacao">Localização</a>
+  </nav>
+
+  <main>
+    <section id="sobre">
+      <h2 class="pj">Sobre a escola</h2>
+      <p class="texto-big">
+        A nossa escola tem alguns cursos como:
+        <a href="informatica.html" target="_blank" style="color: rgb(4, 0, 255); text-decoration: underline;">Informática</a>
+        e
+        <a href="file:///D:/Trabalho%20do%20yuri/seguran%C3%A7a.html" target="_blank" style="color: orange; text-decoration: underline;">Segurança do trabalho</a>,
+        para quem quer estudar mesmo é uma boa oportunidade já que a maior parte desses cursos são pagos.
+        Basicamente, é sobre agarrar as oportunidades que a vida te dá. Embaixo vou deixar fotos da nossa escola e de
+        alguns alunos.
+      </p>
+    </section>
+
+    <section id="galeria" class="galeria">
+      <h2>Sj Fotos</h2>
+
+      <!-- Fotos destaque -->
+      <div class="destaques">
+        <img src="alunus.png" alt="Foto destaque alunos" />
+        <img src="alunus2.png" alt="Foto destaque alunos 2" />
+      </div>
+
+      <!-- Galeria principal -->
+      <div class="galeria-baixo">
+        <img src="tumulto.png" alt="Foto da escola" />
+        <img src="fanfarosos.png" alt="Foto de alunos" />
+        <img src="school.png" alt="Foto da escola" />
+        <img src="60anus.png" alt="Comemoração 60 anos" />
+        <img src="fanfaros.jfif" alt="Foto da fanfarra" />
+      </div>
+    </section>
+
+    <!-- Mapa com localização -->
+    <section id="localizacao" style="text-align: center; margin-top: 40px;">
+      <h2 style="color: orange;">Localização da Escola</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.022934785441!2d-46.61787448480977!3d-20.69258098617558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bbda59a6c22c99%3A0x7e8709617153dced!2sEscola%20Estadual%20S%C3%A3o%20Jos%C3%A9!5e0!3m2!1spt-BR!2sbr!4v1683455976759!5m2!1spt-BR!2sbr"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+  </main>
+
+  <footer>
+    <h1><a href="index.html">Voltar para a página anterior</a></h1>
+    <p>&copy; 2025. 2° Informática. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+
+</html>
